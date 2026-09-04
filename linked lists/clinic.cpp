@@ -9,33 +9,39 @@ struct PatientNode{
 };
 
 int main() {
-    PatientNode * pateint1 = new PatientNode();
-    PatientNode * pateint2 = new PatientNode();
-    PatientNode * pateint3 = new PatientNode();
-    PatientNode * pateint4 = new PatientNode();
+    PatientNode * patient1 = new PatientNode();
+    PatientNode * patient2 = new PatientNode();
+    PatientNode * patient3 = new PatientNode();
+    PatientNode * patient4 = new PatientNode();
+    PatientNode * newpatient5 = new PatientNode();
 
-    PatientNode * head = pateint1;
+    PatientNode * head = patient1;
     PatientNode * temp = head;
 
-    pateint1 -> pt_id = 11;
-    pateint1 -> pt_name = "Ajay Patil";
-    pateint1 -> prblm = "Back Pain";
-    pateint1 -> next = pateint2;
+    patient1 -> pt_id = 11;
+    patient1 -> pt_name = "Ajay Patil";
+    patient1 -> prblm = "Back Pain";
+    patient1 -> next = patient2;
 
-    pateint2 -> pt_id = 12;
-    pateint2 -> pt_name = "Dev Sagar";
-    pateint2 -> prblm = "Viral Flu";
-    pateint2 -> next = pateint3;
+    patient2 -> pt_id = 12;
+    patient2 -> pt_name = "Dev Sagar";
+    patient2 -> prblm = "Viral Flu";
+    patient2 -> next = patient3;
 
-    pateint3 -> pt_id = 13;
-    pateint3 -> pt_name = "Ankit Prasad";
-    pateint3 -> prblm = "Viral Flu";
-    pateint3 -> next = pateint4;
+    patient3 -> pt_id = 13;
+    patient3 -> pt_name = "Ankit Prasad";
+    patient3 -> prblm = "Viral Flu";
+    patient3 -> next = patient4;
 
-    pateint4 -> pt_id = 14;
-    pateint4 -> pt_name = "Ronak Patel";
-    pateint4 -> prblm = "Vomiting";
-    pateint4 -> next = NULL;
+    patient4 -> pt_id = 14;
+    patient4 -> pt_name = "Ronak Patel";
+    patient4 -> prblm = "Vomiting";
+    patient4 -> next = newpatient5;
+
+    newpatient5 -> pt_id = 15;
+    newpatient5 -> pt_name = "Jigar Patel";
+    newpatient5 -> prblm = "Headache";
+    newpatient5 -> next = NULL;
 
     while (temp != NULL){
         cout<<"Patient Id   : "<<temp->pt_id<<endl;
