@@ -9,15 +9,15 @@ struct PatientNode{
 };
 
 int main() {
+
     PatientNode * patient1 = new PatientNode();
     PatientNode * patient2 = new PatientNode();
     PatientNode * patient3 = new PatientNode();
     PatientNode * patient4 = new PatientNode();
     PatientNode * newpatient5 = new PatientNode();
 
-    PatientNode * head = patient2;
+    PatientNode * head = patient1;
     PatientNode * temp = head;
-    delete temp;
 
     patient1 -> pt_id = 11;
     patient1 -> pt_name = "Ajay Patil";
@@ -50,4 +50,49 @@ int main() {
         cout<<"Problem      : "<<temp->prblm<<endl<<"\n";
         temp = temp->next;
     }
+
+    temp = head;
+    head = head -> next;
+    delete temp;
+
+    cout<<"\nAfter Consulting First Patient\n";
+
+    temp = head;
+
+    while(temp != NULL){
+        cout<<"Patient Id   : "<<temp->pt_id<<endl;
+        cout<<"Patient Name : "<<temp->pt_name<<endl;
+        cout<<"Problem      : "<<temp->prblm<<endl<<"\n";
+        temp = temp->next;
+    }
+
+    cout<<"Deleting Patient ID :- 14........................";
+
+    int removeid = 14;
+
+    temp = head;
+
+    while(temp->next != NULL){
+        if(temp->next->pt_id == removeid){
+            PatientNode * deletenode = temp->next;
+            temp->next = deletenode->next;
+            delete deletenode;
+            break;
+        }
+        temp = temp->next;
+    }
+
+    cout << "\nAfter deletion:\n\n";
+
+    temp = head;
+
+    while (temp != NULL) {
+        cout << "Patient Id   : " << temp->pt_id << endl;
+        cout << "Patient Name : " << temp->pt_name << endl;
+        cout << "Problem      : " << temp->prblm << endl;
+        cout << endl;
+        temp = temp->next;
+    }
+
+    return 0;
 }
