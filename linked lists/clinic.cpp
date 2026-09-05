@@ -15,8 +15,9 @@ int main() {
     PatientNode * patient4 = new PatientNode();
     PatientNode * newpatient5 = new PatientNode();
 
-    PatientNode * head = patient1;
+    PatientNode * head = patient2;
     PatientNode * temp = head;
+    delete temp;
 
     patient1 -> pt_id = 11;
     patient1 -> pt_name = "Ajay Patil";
